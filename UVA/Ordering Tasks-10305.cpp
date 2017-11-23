@@ -23,6 +23,8 @@ Sample Output
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <cstring>
+
 
 using namespace std;
 

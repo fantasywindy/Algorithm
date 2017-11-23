@@ -35,22 +35,22 @@ fstream fs("/Users/ice/Documents/codeforce/input.txt");
 
 struct building
 {
-    double left_x;
-    double left_y;
-    double width;
-    double depth;
-    double height;
+    double x0;
+    double y0;
+    double x1;
+    double y1;
+    double h;
     int id;
 };
 
 bool operator<(const building & l, const building & r)
 {
-    return l.left_x < r.left_x || (l.left_x == r.left_x && l.left_y < r.left_y);
+    return l.x0 < r.x0 || (l.x0 == r.x0 && l.y0 < r.y0);
 }
 
 bool inRange(vector<building>& buildings, int i, int x)
 {
-    return buildings[i].left_x <= x && x <= buildings[i].left_x + buildings[i].width;
+    return buildings[i].x0 <= x && x <= buildings[i].x1;
 }
 
 bool visible(vector<building> & buildings, int i, int x)
